@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
+import Error from "./Error";
 import Skeleton from "./Skeleton";
 import { Link } from "react-router-dom";
 const Products = () => {
@@ -24,9 +24,11 @@ const Products = () => {
         setData(data);
         console.log(data);
       } else {
+        setLoading(false)
         setError("Something went wrong.");
       }
     } catch (err: any) {
+      setLoading(false)
       setError(err.message);
     }
   };
@@ -37,7 +39,7 @@ const Products = () => {
     <section>
       <div className="products-grid">
         {loading && <Skeleton />}
-        {error && <p>Error: {error}</p>}
+        {error && <Error/>}
         {data.length > 0 &&
           data.map((product, index) => {
             return (

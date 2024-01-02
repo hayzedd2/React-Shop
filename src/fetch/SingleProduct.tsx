@@ -30,9 +30,11 @@ const SingleProduct = () => {
         setData(productData);
       } else {
         console.log(response.status);
+        setLoading(false)
       }
     } catch (err: any) {
       setError(`Error: ${err.message}`);
+      setLoading(false)
     }
   };
 
@@ -44,7 +46,7 @@ const SingleProduct = () => {
     <div>
       {loading && <Spinner />}
       {error && <p>{error}</p>}
-      {/* {data && <SingleProductPage data={data} />} */}
+      {data && <SingleProductPage data={data} />}
     </div>
   );
 };

@@ -9,9 +9,17 @@ interface SingleProduct {
   slug: string;
   price: number;
   image: string;
-  description : string;
+  description: string;
 }
 const SingleProductPage: React.FC<SingleProductPageProps> = ({ data }) => {
+  const radios = document.querySelectorAll("size-radio")
+  radios.forEach((radio :any)=>{
+    console.log(radios)
+    if(radio.checked === true){
+      // radio.classList.add("active")
+      console.log('check')
+    }
+  })
   return (
     <>
       <section>
@@ -36,6 +44,35 @@ const SingleProductPage: React.FC<SingleProductPageProps> = ({ data }) => {
             </h3>
             <h2 className="font-afacad text-[1.65rem] mt-1 font-[600]">$21</h2>
             <p className=" font-afacad text-[1.3rem]">{data[0].description}</p>
+          </div>
+          <div className="mt-5 mb-20">
+            <form action="">
+              <div className="size">
+                <div className="flex gap-4 items-center justify-center">
+                  <div className=" font-afacad text-[1.45rem] font-[400]">
+                    <p>Size: </p>
+                  </div>
+                  <div className="flex gap-3">
+                    <label htmlFor="xxl" className="size-label">
+                      XXL
+                      <input type="radio" name="size"  className="size-radio" id="xxl" />
+                    </label>
+                    <label htmlFor="xl" className="size-label">
+                      XL
+                      <input type="radio" name="size"  className="size-radio" id="xl" />
+                    </label>
+                    <label htmlFor="l" className="size-label">
+                      L
+                      <input type="radio" name="size"  className="size-radio" id="l" />
+                    </label>
+                    <label htmlFor="s" className="size-label">
+                      S
+                      <input type="radio" name="size"  className="size-radio" id="s" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </section>

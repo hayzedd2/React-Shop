@@ -62,3 +62,13 @@
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
+.size-label{
+  @apply border px-4 py-1 font-afacad font-[500] text-[1.2rem] cursor-pointer
+}
+.size-label input[type="radio"]{
+  display: none;
+}
+.size-label input[type="radio"]:checked + .size-label {
+  background-color: black;
+  color: white;
+}
