@@ -1,14 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap");
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-.products-grid{
+.products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
@@ -18,11 +18,11 @@
     transform: translateX(100%);
   }
 }
-.angle-rotate-up{
+.angle-rotate-up {
   transform: rotate(180deg);
   transition: all ease-in-out 0.3s;
 }
-.angle-rotate-down{
+.angle-rotate-down {
   transform: rotate(0deg);
   transition: all ease-in-out 0.3s;
 }
@@ -32,7 +32,7 @@
   --highlight-color: #f5f5f5;
   --animation-duration: 1.5s;
   --animation-direction: normal;
-  --pseudo-element-display: block; 
+  --pseudo-element-display: block;
   background-color: var(--base-color);
   position: relative;
   user-select: none;
@@ -41,7 +41,7 @@
 }
 
 .box::after {
-  content: ' ';
+  content: " ";
   display: var(--pseudo-element-display);
   position: absolute;
   top: 0;
@@ -62,13 +62,48 @@
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.size-label{
-  @apply border px-4 py-1 font-afacad font-[500] text-[1.2rem] cursor-pointer
+.size-div {
+  @apply border px-4 py-1 font-afacad font-[500] text-[1.2rem] cursor-pointer;
 }
-.size-label input[type="radio"]{
+.color p {
+  @apply font-afacad text-[1.25rem] font-[500];
+}
+.size-label input[type="radio"] {
   display: none;
 }
-.size-label input[type="radio"]:checked + .size-label {
+.size-label input[type="radio"]:checked ~ .size-div {
   background-color: black;
   color: white;
+  border: none;
+}
+
+.btn-cart {
+  @apply font-afacad text-[1.2rem] uppercase font-[400] text-white bg-black border-none px-14 py-3;
+  letter-spacing: 1px;
+}
+.heading {
+  border-bottom: 1px solid #f2f2f2;
+}
+.discount input {
+  color: #b7b7b7;
+  border: 1px solid #e1e1e1;
+  outline: none;
+  @apply font-afacad pl-[20px] w-full h-[50px] text-[16px]
+}
+.discount button{
+  @apply font-afacad text-[1.2rem] uppercase font-[400] text-white bg-black border-none px-8 h-[50px];
+  letter-spacing: 1px;
+}
+.total-body button{
+  @apply font-afacad text-[1.1rem] uppercase font-[500] text-white bg-black w-full border-none px-8 py-3;
+  letter-spacing: 2px;
+}
+.cart-body{
+  border-bottom: 1px solid #f2f2f2;
+  @apply pb-10
+}
+.continue{
+  @apply font-afacad text-[1.1rem] uppercase font-[500] text-black bg-white px-10 py-4 mt-5;
+  letter-spacing:1px;
+  border: 1px solid #e1e1e1;
 }

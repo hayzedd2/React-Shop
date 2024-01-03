@@ -12,14 +12,14 @@ interface SingleProduct {
   description: string;
 }
 const SingleProductPage: React.FC<SingleProductPageProps> = ({ data }) => {
-  const radios = document.querySelectorAll("size-radio")
-  radios.forEach((radio :any)=>{
-    console.log(radios)
-    if(radio.checked === true){
+  const radios = document.querySelectorAll("size-radio");
+  radios.forEach((radio: any) => {
+    console.log(radios);
+    if (radio.checked === true) {
       // radio.classList.add("active")
-      console.log('check')
+      console.log("check");
     }
-  })
+  });
   return (
     <>
       <section>
@@ -47,31 +47,69 @@ const SingleProductPage: React.FC<SingleProductPageProps> = ({ data }) => {
           </div>
           <div className="mt-5 mb-20">
             <form action="">
-              <div className="size">
+             <div className="flex gap-[6rem]">
+             <div className="size">
                 <div className="flex gap-4 items-center justify-center">
                   <div className=" font-afacad text-[1.45rem] font-[400]">
                     <p>Size: </p>
                   </div>
                   <div className="flex gap-3">
                     <label htmlFor="xxl" className="size-label">
-                      XXL
-                      <input type="radio" name="size"  className="size-radio" id="xxl" />
+                      <input
+                        type="radio"
+                        name="size"
+                        className="size-radio"
+                        id="xxl"
+                      />
+                      <div className="size-div"> XXL</div>
                     </label>
                     <label htmlFor="xl" className="size-label">
-                      XL
-                      <input type="radio" name="size"  className="size-radio" id="xl" />
+                      <input
+                        type="radio"
+                        name="size"
+                        className="size-radio"
+                        id="xl"
+                      />
+                      <div className="size-div"> XL</div>
                     </label>
                     <label htmlFor="l" className="size-label">
-                      L
-                      <input type="radio" name="size"  className="size-radio" id="l" />
+                      <input
+                        type="radio"
+                        name="size"
+                        className="size-radio"
+                        id="l"
+                      />
+                      <div className="size-div"> L</div>
                     </label>
                     <label htmlFor="s" className="size-label">
-                      S
-                      <input type="radio" name="size"  className="size-radio" id="s" />
+                      <input
+                        type="radio"
+                        name="size"
+                        className="size-radio"
+                        id="s"
+                      />
+                      <div className="size-div">S</div>
                     </label>
+                   
                   </div>
                 </div>
               </div>
+              <div className="color flex items-center justify-center gap-4">
+                <div>
+                  <p>Color: </p>
+                </div>
+                <div>
+                  <select name="" id="">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                  </select>
+                </div>
+              </div>
+             </div>
+             <div className="text-center mt-8">
+              <button className="btn-cart"><a href="/cart">Add to Cart</a></button>
+             </div>
             </form>
           </div>
         </div>
