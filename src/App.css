@@ -85,10 +85,14 @@
   border-bottom: 1px solid #f2f2f2;
 }
 .discount input {
-  color: #b7b7b7;
+  
   border: 1px solid #e1e1e1;
+  color: black;
   outline: none;
   @apply font-afacad pl-[20px] w-full h-[50px] text-[16px]
+}
+.discount input::placeholder{
+  color: #b7b7b7;
 }
 .discount button{
   @apply font-afacad text-[1.2rem] uppercase font-[400] text-white bg-black border-none px-8 h-[50px];
@@ -96,7 +100,7 @@
 }
 .total-body button{
   @apply font-afacad text-[1.1rem] uppercase font-[500] text-white bg-black w-full border-none px-8 py-3;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 .cart-body{
   border-bottom: 1px solid #f2f2f2;
@@ -106,4 +110,40 @@
   @apply font-afacad text-[1.1rem] uppercase font-[500] text-black bg-white px-10 py-4 mt-5;
   letter-spacing:1px;
   border: 1px solid #e1e1e1;
+}
+
+.checkout-heading{
+  @apply pb-5 font-afacad text-[1.3rem] uppercase font-[500] w-full;
+  border-bottom: 1px solid #e1e1e1;
+}
+.row label{
+  @apply  font-afacad text-[1.25rem] capitalize font-[400] text-[#111111]
+}
+.row label span{
+  color: #e53637;
+}
+.row{
+  @apply flex  gap-8 mt-5
+}
+.row div{
+  @apply basis-[50%]
+}
+.row input{
+  border: 1px solid #e1e1e1;
+  color: black;
+  outline: none;
+  @apply font-afacad pl-[20px] w-full h-[50px] text-[16px] mt-3;
+}
+.row input::placeholder{
+  color: #b7b7b7;
+}
+.row .full{
+  @apply basis-[100%]
+}
+.checkout-text{
+  @apply  mt-5 font-afacad text-[17px] font-[400]
+}
+.row-btn button{
+  @apply font-afacad text-[1.2rem] uppercase font-[400] w-full text-white bg-black border-none flex items-center justify-center h-[50px];
+  letter-spacing: 1px;
 }

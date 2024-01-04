@@ -7,6 +7,7 @@ import App from "./App";
 import Navbar from "./components/Navbar";
 import CategoryShop from "./components/CategoryShop";
 import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
 
 const RoutesList = () => {
   return (
@@ -16,6 +17,7 @@ const RoutesList = () => {
         <Route path="/:slug" element={<SingleProduct />} />
         <Route path="/categories/:category_id" element={<CategoryShop/>} />
         <Route path="/cart" element={<Cart/>} />
+        <Route path="/checkout" element={<Checkout/>} />
       </Route>
     </Routes>
   );
