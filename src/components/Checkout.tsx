@@ -17,8 +17,8 @@ const Checkout = () => {
           </p>
         </div>
       </div>
-      <div className="flex max-w-[75rem] mx-auto px-4 mt-14 gap-[3rem]">
-        <div className="checkout basis-[65%]">
+      <div className="flex xl:flex-nowrap sm:flex-wrap-reverse max-w-[75rem] mx-auto px-4 xl:mt-14 sm:mt-5 gap-[3rem]">
+        <div className="checkout xl:basis-[65%] sm:basis-[100%]">
           <div className="checkout-body flex flex-col ">
             <div className="checkout-heading">
               <h1>BILLING DETAILS</h1>
@@ -88,7 +88,7 @@ const Checkout = () => {
                 <div className="row">
                   <div className="full">
                     <label htmlFor="password">
-                      Account Password<span>*</span>
+                      Account Password
                     </label>
                     <input type="password" name="password" required />
                   </div>
@@ -100,11 +100,11 @@ const Checkout = () => {
             </div>
           </div>
         </div>
-        <div className="checkout-total basis-[35%]">
-          <div className="total font-afacad mt-10 px-8 py-10 bg-[#f3f2ee]">
+        <div className="checkout-total xl:basis-[35%] sm:basis-[100%]">
+          <div className="total font-afacad mt-10 px-4 py-8 bg-[#f3f2ee]">
             <div className="total-heading mb-5">
               <h3
-                className="text-[1.6rem] font-[500] pb-5"
+                className="xl:text-[1.6rem] sm:text-[1.3rem] font-[500] pb-5"
                 style={{ borderBottom: "1px solid #e1e1e1" }}
               >
                 YOUR ORDER
@@ -113,17 +113,17 @@ const Checkout = () => {
             <div className="total-body flex flex-col gap-4">
               <div className="py-4 flex flex-col gap-4">
                 <div className="flex justify-between items-center w-full">
-                  <h5 className="text-[1.2rem]">Products</h5>
-                  <p className="text-[1.2rem] font-[400] ">Total</p>
+                  <h5 className="text-[1.1rem] uppercase font-[700] font-crimson ">Products</h5>
+                  <p className="text-[1.1rem] uppercase font-[700] font-crimson ">Total</p>
                 </div>
                 <div className="flex justify-between items-center w-full">
                   <h5 className="text-[1.2rem]">Baggy jeans</h5>
-                  <p className="text-[1.2rem] font-[400] ">$21</p>
+                  <p className="text-[1.2rem] font-[700] font-crimson ">$21</p>
                 </div>
 
                 <div className="flex justify-between items-center w-full">
                   <h5 className="text-[1.2rem]">Red Shirt</h5>
-                  <p className="text-[1.2rem] font-[400] ">$21</p>
+                  <p className="text-[1.2rem] font-[700]  font-crimson">$21</p>
                 </div>
               </div>
 
@@ -132,14 +132,14 @@ const Checkout = () => {
                 className="py-4"
               >
                 <div className="flex justify-between items-center w-full">
-                  <h5 className="text-[1.2rem]">Total</h5>
-                  <p className="text-[1.2rem] text-red-600 font-[500] ">$42</p>
+                  <h5 className="text-[1.1rem] uppercase font-[700] font-crimson">Total</h5>
+                  <p className="text-[1.2rem]  text-red-600 font-[700] font-crimson ">$42</p>
                 </div>
               </div>
 
-              <div className="mt-5">
+              {/* <div className="mt-5">
                 <button>Place Order</button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

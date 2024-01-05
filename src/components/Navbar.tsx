@@ -7,7 +7,7 @@ import { Outlet } from "react-router-dom";
 const Navbar = () => {
   return (
    <>
-    <nav className="w-full font-crimson">
+    <nav className="w-full font-crimson xl:block sm:hidden">
       <header className="max-w-[75rem] mx-auto flex py-6 items-center px-4">
         <div className="logo basis-[30%]">
           <h1 className="font-[700] text-[2.2rem]">HaYzedd</h1>

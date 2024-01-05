@@ -5,26 +5,26 @@ import { FaTimes } from "react-icons/fa";
 const Cart = () => {
   return (
     <section>
-      <div className="flex max-w-[75rem] mx-auto px-4 mt-14 gap-[6rem]">
-        <div className="cart basis-[65%]">
-          <div className="heading flex pb-5 font-afacad text-[1.2rem] font-[500]">
+      <div className="flex xl:flex-nowrap sm:flex-wrap max-w-[75rem] mx-auto px-4 mt-14 gap-[6rem]">
+        <div className="cart xl:basis-[65%] sm:basis-[100%]">
+          <div className="heading xl:flex sm:hidden pb-5 font-afacad text-[1.2rem] font-[500]">
             <div className="basis-[50%]">
               <p>PRODUCT</p>
             </div>
-            <div className="basis-[50%] flex">
+            <div className="basis-[50%]">
               <p className="basis-[50%]">QUANTITY</p>
               <p className="basis-[50%]">TOTAL</p>
             </div>
           </div>
-          <div className="cart-body flex mt-10">
-            <div className="basis-[50%] flex gap-6 items-center">
+          <div className="cart-body flex xl:flex-nowrap sm:flex-wrap mt-10">
+            <div className="xl:basis-[50%] sm:basis-[100%] flex xl:flex-nowrap sm:flex-wrap xl:gap-6 sm:gap-3 items-center">
               <img src={product} className="w-24 h-24" alt="" />
               <div className=" font-afacad ">
                 <h3 className="text-[1.2rem] font-[500]">Test Product 1</h3>
                 <p className="text-[1.25rem] font-[700]">$21</p>
               </div>
             </div>
-            <div className="basis-[50%] flex items-center">
+            <div className="xl:basis-[50%] sm:basis-[100%] flex items-center">
               <p className="basis-[50%]">QUANTITY</p>
               <div className="basis-[50%] items-center font-afacad text-[1.4rem] font-[600] flex justify-between">
                 <p>$21</p>
@@ -38,7 +38,7 @@ const Cart = () => {
             <button className="continue">continue shopping</button>
           </div>
         </div>
-        <div className="cart-total basis-[35%]">
+        <div className="cart-total xl:basis-[35%] sm:basis-[100%]">
           <div className="discount">
             <p className="font-afacad text-[1.2rem] font-[500] pb-5">
               DISCOUNT CODES
