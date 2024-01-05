@@ -117,13 +117,13 @@
   border-bottom: 1px solid #e1e1e1;
 }
 .row label{
-  @apply  font-afacad xl:text-[1.15rem] sm:text-[1rem] capitalize font-[400] text-[#111111]
+  @apply  font-afacad xl:text-[1.15rem] sm:text-[1.1rem] capitalize font-[400] text-[#111111]
 }
 .row label span{
   color: #e53637;
 }
 .row{
-  @apply flex xl:flex-nowrap sm:flex-wrap xl:gap-8 sm:gap-3 xl:my-4 sm:my-3
+  @apply flex xl:flex-nowrap sm:flex-wrap xl:gap-8 sm:gap-5 xl:my-4 sm:my-5
 }
 .row div{
   @apply xl:basis-[50%] sm:basis-[100%] text-[#111111]
