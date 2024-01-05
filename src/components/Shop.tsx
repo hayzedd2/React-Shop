@@ -17,11 +17,11 @@ const Shop = () => {
           </p>
         </div>
       </div>
-      <div className="flex max-w-[75rem] px-4 mx-auto py-7 font-afacad my-4 gap-[2rem]">
-        <div className="category-flex basis-[20%]">
+      <div className="flex xl:flex-nowrap sm:flex-wrap max-w-[75rem] px-4 mx-auto py-7 font-afacad my-4 gap-[2rem]">
+        <div className="category-flex xl:basis-[20%] sm:basis-[100%]">
           <CategoriesList />
         </div>
-        <div className="product-flex basis-[80%]">
+        <div className="product-flex xl:basis-[80%] sm:basis-[100%] items-center justify-center">
           <Products />
         </div>
       </div>

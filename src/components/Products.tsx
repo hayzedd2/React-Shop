@@ -45,7 +45,7 @@ const Products = () => {
             return (
               <div key={index}>
                 {/* <Link to={`/${product.slug}`}> */}
-                  <img src={`http://127.0.0.1:8000${product.image}`} alt="" />
+                  <img src={`http://127.0.0.1:8000${product.image}`} alt="" className="w-full"/>
                   <div className="mt-2.5">
                     <p> {product.product_name}</p>
                     <h1 className="text-[1.45rem] font-[700]">
