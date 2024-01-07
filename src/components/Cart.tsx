@@ -1,6 +1,5 @@
 import React from "react";
-// @ts-ignore
-import product from "../images/product-8.jpg";
+
 import { FaTimes } from "react-icons/fa";
 interface CartProps {
   data: CartProduct[];
