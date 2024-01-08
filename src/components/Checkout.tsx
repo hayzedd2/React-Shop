@@ -101,7 +101,7 @@ const Checkout = () => {
           </div>
         </div>
         <div className="checkout-total xl:basis-[35%] sm:basis-[100%]">
-          <div className="total font-afacad mt-10 px-4 py-8 bg-[#f3f2ee]">
+          <div className="total font-afacad mt-10 sm:px-4 xl:px-6 sm:py-8 xl:py-10 bg-[#f3f2ee]">
             <div className="total-heading mb-5">
               <h3
                 className="xl:text-[1.6rem] sm:text-[1.3rem] font-[500] pb-5"

@@ -12,6 +12,7 @@ interface CartProduct {
   image: string;
 }
 const Cart: React.FC<CartProps> = ({ data }) => {
+    console.log(data)
   return (
     <section>
       <div className="flex xl:flex-nowrap sm:flex-wrap max-w-[75rem] mx-auto px-4 mt-14 gap-[6rem]">
@@ -28,12 +29,12 @@ const Cart: React.FC<CartProps> = ({ data }) => {
           <div>
             <div className="cart-body flex xl:flex-nowrap sm:flex-wrap mt-10">
               <div className="xl:basis-[50%] sm:basis-[100%] flex xl:flex-nowrap sm:flex-wrap xl:gap-6 sm:gap-3 items-center">
-                <img src={product} className="w-24 h-24" alt="" />
+                {/* <img src={product} className="w-24 h-24" alt="" /> */}
                 <div className=" font-afacad ">
                   <h3 className="text-[1.2rem] font-[500]">
                   {/* {data[0].product_name} */}
                   </h3>
-                  <p className="text-[1.25rem] font-[700]">${data[0].price}</p>
+                  {/* <p className="text-[1.25rem] font-[700]">${data[0].price}</p> */}
                 </div>
               </div>
               <div className="xl:basis-[50%] sm:basis-[100%] flex items-center">
